@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3+zstd.1.5.7
+
+- the build hook does nothing when the build asks for no code assets
+
 ## 0.1.2+zstd.1.5.7
 
 - less strict package constraints

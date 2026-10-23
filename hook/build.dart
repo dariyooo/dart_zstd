@@ -11,6 +11,8 @@ const _libCandidates = ['third_party/libzstd/lib', 'third_party/zstd/lib'];
 
 void main(List<String> arguments) async {
   await build(arguments, (input, output) async {
+    if (!input.config.buildCodeAssets) return;
+
     // MSVC cannot assemble the GNU-syntax decompression fast path, and needs
     // the export attribute spelled out for every public symbol.
     final windows = input.config.code.targetOS == OS.windows;
